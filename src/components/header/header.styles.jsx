@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   padding: 36px;
   height: 20vh;
 `;
@@ -9,6 +10,11 @@ export const Menu = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  @media (max-width: 768px) {
+    & :not(:first-child) {
+      display: none;
+    }
+  }
 `;
 export const Logo = styled.a`
   cursor: pointer;
@@ -17,6 +23,9 @@ export const Logo = styled.a`
   font-weight: 100;
   margin-right: 40px;
   color: #000000;
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
 `;
 export const MenuItem = styled.a`
   cursor: pointer;
@@ -24,6 +33,10 @@ export const MenuItem = styled.a`
   font-size: 25px;
   font-weight: 400;
   margin-right: 40px;
+  @media (max-width: 768px) {
+    font-size: 15px;
+    margin-right: 15px;
+  }
   color: ${(props) => (props.green ? "#00f5d4" : "#000000")};
   &::after {
     display: block;
@@ -42,4 +55,13 @@ export const Me = styled.div`
   display: flex;
   align-items: center;
   justify-content: end;
+`;
+
+export const MeIcon = styled.div`
+  width: 60px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 768px) {
+    width: 50px;
+  }
 `;
