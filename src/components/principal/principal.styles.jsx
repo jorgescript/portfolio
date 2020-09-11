@@ -10,9 +10,10 @@ export const PrincipalContainer = styled.div`
   background-position: bottom right;
   @media (max-width: 768px) {
     background-image: linear-gradient(
-        to top,
-        rgba(173, 173, 173, 80%),
-        rgba(225, 225, 225, 0)
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.5) 40%,
+        rgba(173, 173, 173, 1) 100%
       ),
       url(${imageBg});
   }
@@ -26,7 +27,7 @@ export const CallToAction = styled.div`
   justify-content: center;
   padding-left: 75px;
   @media (max-width: 768px) {
-    justify-content: end;
+    justify-content: flex-end;
     padding-left: 10px;
     padding-bottom: 65px;
   }

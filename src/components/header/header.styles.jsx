@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ReactComponent as Consola } from "./../../assets/img/consola.svg";
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -54,13 +55,21 @@ export const Me = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 `;
 
-export const MeIcon = styled.div`
+/* export const  = styled.div`
+  height: 100%;
   width: 60px;
   display: flex;
   align-items: center;
+  @media (max-width: 768px) {
+    width: 50px;
+  }
+`; */
+export const MeIcon = styled(Consola)`
+  width: 60px;
+  height: 60px;
   @media (max-width: 768px) {
     width: 50px;
   }
