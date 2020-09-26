@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { ReactComponent as Consola } from "./../../assets/img/consola.svg";
+import { ReactComponent as Mensaje } from "./../../assets/img/mensaje.svg";
 
 export const HeaderContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 36px;
-  height: 20vh;
+  min-height: 20vh;
+  background-color: transparent;
 `;
 export const Menu = styled.div`
   flex: 1;
@@ -67,10 +68,10 @@ export const Me = styled.div`
     width: 50px;
   }
 `; */
-export const MeIcon = styled(Consola)`
-  width: 60px;
-  height: 60px;
+export const MeIcon = styled(Mensaje)`
+  width: 70px;
+  height: 70px;
   @media (max-width: 768px) {
-    width: 50px;
+    width: 60px;
   }
 `;

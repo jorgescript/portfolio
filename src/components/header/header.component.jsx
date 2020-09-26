@@ -13,7 +13,7 @@ import {
 const Header = () => (
   <HeaderContainer>
     <Menu>
-      <Logo>&lt;JM/&gt;</Logo>
+      <Logo>&lt;JS/&gt;</Logo>
       <MenuItem>Sobre mi</MenuItem>
       <MenuItem>Proyectos</MenuItem>
     </Menu>
