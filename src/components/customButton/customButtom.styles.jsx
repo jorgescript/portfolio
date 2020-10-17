@@ -1,17 +1,22 @@
 import styled, { css } from "styled-components";
+import { breakPoints, colors } from "../../assets/variablesCSS";
 
 const BorderBlack = css`
   border: 2px solid #000000;
   background-color: transparent;
   color: #000000;
-  @media (max-width: 768px) {
-    border: 2px solid transparent;
-    background-color: #ffffff;
+`;
+const FullWidth = css`
+  width: 100%;
+  &:hover {
+    background-color: ${colors.colorAzul};
+    transform: scale(1);
   }
 `;
 
-const customizeButton = ({ borderBlack }) => {
+const customizeButton = ({ borderBlack, fullWidth }) => {
   if (borderBlack) return BorderBlack;
+  if (fullWidth) return FullWidth;
 };
 
 export const CustomButton = styled.button`
@@ -23,13 +28,24 @@ export const CustomButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #00f5d4;
-  color: #ffffff;
-  font-size: 12px;
+  background-color: ${colors.colorVerde};
+  color: ${colors.colorBlanco};
+  font-size: 15px;
+  font-weight: bold;
   border-radius: 5px;
-  transition: transform 0.2s;
+  transition: all 0.2s;
   &:hover {
     transform: scale(1.2);
+  }
+
+  @media (max-width: ${breakPoints.pequenio}) {
+    font-size: 12px;
+    padding: 5px 10px;
+    font-weight: 400;
+  }
+  @media (max-width: ${breakPoints.muyPequenio}) {
+    font-size: 10px;
+    padding: 5px;
   }
   ${customizeButton}
 `;

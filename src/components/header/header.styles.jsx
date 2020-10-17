@@ -1,57 +1,40 @@
 import styled from "styled-components";
-import { ReactComponent as Mensaje } from "./../../assets/img/mensaje.svg";
+import { colors, breakPoints } from "./../../assets/variablesCSS";
+import MeLight from "./../../assets/img/me_light.png";
 
 export const HeaderContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 36px;
-  min-height: 20vh;
-  background-color: transparent;
+  padding: 10px 30px;
+  @media (max-width: ${breakPoints.pequenio}) {
+    padding: 10px;
+  }
 `;
+
 export const Menu = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  @media (max-width: 768px) {
+  @media (max-width: ${breakPoints.pequenio}) {
     & :not(:first-child) {
       display: none;
     }
   }
 `;
+
 export const Logo = styled.a`
   cursor: pointer;
   font-family: "Lato", sans-serif;
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 100;
   margin-right: 40px;
-  color: #000000;
-  @media (max-width: 768px) {
-    font-size: 40px;
+  color: ${colors.colorObscuro};
+  @media (max-width: ${breakPoints.pequenio}) {
+    font-size: 50px;
   }
 `;
-export const MenuItem = styled.a`
-  cursor: pointer;
-  font-family: "Nunito", sans-serif;
-  font-size: 25px;
-  font-weight: 400;
-  margin-right: 40px;
-  @media (max-width: 768px) {
-    font-size: 15px;
-    margin-right: 15px;
-  }
-  color: ${(props) => (props.green ? "#00f5d4" : "#000000")};
-  &::after {
-    display: block;
-    content: "";
-    width: 0;
-    height: 3px;
-    background-color: #00f5d4;
-    transition: width 0.3s;
-  }
-  &:hover::after {
-    width: 100%;
-  }
-`;
+
 export const Me = styled.div`
   flex: 1;
   display: flex;
@@ -59,19 +42,15 @@ export const Me = styled.div`
   justify-content: flex-end;
 `;
 
-/* export const  = styled.div`
-  height: 100%;
-  width: 60px;
-  display: flex;
-  align-items: center;
-  @media (max-width: 768px) {
-    width: 50px;
-  }
-`; */
-export const MeIcon = styled(Mensaje)`
+export const MeIcon = styled.div`
+  background-image: url(${MeLight});
+  background-size: cover;
+  background-position: center center;
   width: 70px;
   height: 70px;
-  @media (max-width: 768px) {
-    width: 60px;
+  border-radius: 50%;
+  border: 3px solid ${colors.colorVerde};
+  @media (max-width: ${breakPoints.pequenio}) {
+    display: none;
   }
 `;
