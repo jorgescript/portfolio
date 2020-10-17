@@ -20,6 +20,7 @@ const customizeButton = ({ borderBlack, fullWidth }) => {
 };
 
 export const CustomButton = styled.button`
+  text-decoration: none;
   border: 2px solid transparent;
   cursor: pointer;
   padding: 10px 20px;

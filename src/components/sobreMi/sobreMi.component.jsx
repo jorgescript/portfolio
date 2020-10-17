@@ -14,7 +14,7 @@ import ImgMe from "../../assets/img/meImagen.png";
 
 const SobreMi = () => {
   return (
-    <section>
+    <section id="sobre-mi">
       <TituloSecccion>Sobre mi</TituloSecccion>
       <DosColumnas>
         <div>

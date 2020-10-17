@@ -59,7 +59,7 @@ export const TituloPrincipal = styled.span`
 
 export const ContenedorBotones = styled.div`
   display: flex;
-  button {
+  a {
     margin-right: 30px;
   }
 `;

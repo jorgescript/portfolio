@@ -15,7 +15,7 @@ import {
 import SVGContacto from "../../assets/img/desk-illustration.svg";
 
 const Contacto = () => (
-  <section>
+  <section id="contacto">
     <Titulo>Contacta conmigo</Titulo>
     <DosColumnas>
       <ImgContacto src={SVGContacto} alt="Imagen de contacto" />

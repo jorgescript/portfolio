@@ -1,5 +1,6 @@
 /* IMPORTS */
 import React from "react";
+import { Link } from "react-scroll";
 /* COMPONENTES */
 import Button from "./../customButton/customButtom.component";
 /* STYLES */
@@ -20,8 +21,18 @@ const Principal = () => (
         <TituloPrincipal strong>Yo te puedo ayudar.</TituloPrincipal>
       </ContenedorTitulo>
       <ContenedorBotones>
-        <Button borderBlack>Conoce más sobre mi</Button>
-        <Button>Contactame</Button>
+        <Button
+          as={Link}
+          to="sobre-mi"
+          smooth={true}
+          duration={1000}
+          borderBlack
+        >
+          Conoce más sobre mi
+        </Button>
+        <Button as={Link} to="contacto" smooth={true} duration={1000}>
+          Contactame
+        </Button>
       </ContenedorBotones>
     </CallToAction>
   </PrincipalContainer>
